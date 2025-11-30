@@ -1,25 +1,13 @@
-# Cachify - Redis-like in-memory KV store
+# Cachify - Redis-like In-Memory Key-Value Store
 
-Build:
-  $ make
+Cachify is a lightweight, Redis-inspired in-memory key-value store built in C/C++ with:
+- Multithreaded access to support concurrent clients  
+- TCP client–server communication  
+- TTL-based key expiration  
+- Redis-like command protocol  
 
-Run server (default port 6379):
-  $ ./cachify_server 6379
+This project simulates the behavior of a distributed cache system with clean, simple operations.
 
-Run client:
-  $ ./cachify_client 127.0.0.1 6379
+---
 
-Protocol:
-  SET key value [ttl_seconds]
-  GET key
-  DEL key
-  SIZE
-  PING
-  QUIT
 
-Responses:
-  +OK\n   for success
-  -ERR <message>\n  for errors
-  $<len>\n<value>\n for GET found
-  $-1\n for GET not found
-  :<number>\n for integer reply (SIZE)

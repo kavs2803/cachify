@@ -129,6 +129,11 @@ $-1
 
   * Listens on a TCP port and spawns a thread per client.
   * Processes simple text commands and sends structured responses.
-* **C
+* **Client**:
+      * Connects to server and sends/receives text-based commands interactively.
+
+License
+This project is licensed under the MIT License.
+  
 
 

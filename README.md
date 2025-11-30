@@ -8,17 +8,17 @@ Cachify is a lightweight, multithreaded, Redis-inspired in-memory key-value stor
 
 ```
 Cachify/
-├── Makefile            
-├── README.md          
-├── cachify_client      
-├── cachify_server     
-├── commands.txt        
-├── include/            
-│   └── kv_store.h     
-└── src/               
-    ├── client.cpp      
-    ├── server.cpp      
-    └── kv_store.cpp    
+├── Makefile            # Build instructions
+├── README.md           # Project overview
+├── cachify_client      # TCP client executable
+├── cachify_server      # TCP server executable
+├── commands.txt        # List of supported commands
+├── include/            # Header files
+│   └── kv_store.h      # KVStore class declaration
+└── src/                # Source code files
+    ├── client.cpp      # Client implementation
+    ├── server.cpp      # Server implementation
+    └── kv_store.cpp    # KVStore class definition
 ```
 
 ---
@@ -130,10 +130,11 @@ $-1
   * Listens on a TCP port and spawns a thread per client.
   * Processes simple text commands and sends structured responses.
 * **Client**:
-      * Connects to server and sends/receives text-based commands interactively.
 
-License
+  * Connects to server and sends/receives text-based commands interactively.
+
+---
+
+## License
+
 This project is licensed under the MIT License.
-  
-
-
